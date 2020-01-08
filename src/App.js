@@ -1,11 +1,11 @@
 import React from "react";
-import photolist from "./components/photolist";
-import "./App.css";
+import Photolist from "./components/Photolist";
+
 
 function App() {
   return (
     <div className="App">
-      <photolist />
+      <Photolist />
     </div>
   );
 }
