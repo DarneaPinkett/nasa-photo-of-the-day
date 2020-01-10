@@ -1,15 +1,22 @@
 import React from "react";
+import { CardBody, Card, CardSubtitle, CardText, CardImg, CardTitle } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Photocard = props => {
     console.log(props);
 
     return (
         <div key={props.data} className="photo">
-        <span>{props.date}</span>
-        <img src={props.Img} alt="nasa"/>
-        <h1>{props.title}</h1>
+        <Card>
+        <CardImg top width="100%" src={props.Img} alt="nasa"/>
+        <CardBody>
+        <CardTitle><h1>{props.title}</h1></CardTitle>
+        <CardSubtitle><span>{props.date}</span>
         <h3>By: {props.copyright}</h3>
-        <p>{props.explanation}</p>
+        </CardSubtitle>
+        <CardText><p>{props.explanation}</p></CardText>
+        </CardBody>
+        </Card>
         </div>
     );
 };
