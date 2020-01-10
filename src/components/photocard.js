@@ -1,5 +1,5 @@
 import React from "react";
-import { CardBody, Card, CardSubtitle, CardText, CardImg, CardTitle } from 'reactstrap';
+import { Button, CardBody, Card, CardSubtitle, CardText, CardImg, CardTitle } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Photocard = props => {
@@ -8,13 +8,14 @@ const Photocard = props => {
     return (
         <div key={props.data} className="photo">
         <Card>
-        <CardImg top width="100%" src={props.Img} alt="nasa"/>
+        <CardImg width="80%" height="80%" src={props.Img} alt="nasa"/>
         <CardBody>
         <CardTitle><h1>{props.title}</h1></CardTitle>
-        <CardSubtitle><span>{props.date}</span>
+        <CardSubtitle>
         <h3>By: {props.copyright}</h3>
+        <Button color="secondary"><h4>{props.date}</h4></Button>
         </CardSubtitle>
-        <CardText><p>{props.explanation}</p></CardText>
+        <CardText>{props.explanation}</CardText>
         </CardBody>
         </Card>
         </div>
